@@ -8,8 +8,12 @@
 #
 
 # 適当にパッケージを入れてみる
-%w{zsh ImageMagick}.each do |pkg|
+%w{zsh ImageMagick wget httpd httpd-devel php php-pear}.each do |pkg|
     package pkg do
         action :install
     end
+end
+
+bash "hoge" do
+      code "sudo pecl install imagick"
 end
