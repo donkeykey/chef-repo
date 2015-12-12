@@ -1,0 +1,11 @@
+{
+  "run_list": [
+    "recipe[yum_repo]",
+    "recipe[base::default]",
+    "recipe[selinux::disabled]",
+    "recipe[base::start]"
+  ],
+  "automatic": {
+    "ipaddress": "52.192.163.167"
+  }
+}
